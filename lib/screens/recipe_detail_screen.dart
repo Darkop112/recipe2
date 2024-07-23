@@ -19,7 +19,9 @@ class RecipeDetailScreen extends StatelessWidget {
         actions: [
           IconButton(
             icon: Icon(
-                recipe.isFavorite ? Icons.favorite : Icons.favorite_border),
+                recipe.isFavorite ? Icons.favorite : Icons.favorite_border,
+                color: recipe.isFavorite ? Colors.red : null,
+                ),
             onPressed: () {
               onFavoriteToggle(recipe);
               Navigator.of(context).pop();
